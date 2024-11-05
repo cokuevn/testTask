@@ -1,0 +1,58 @@
+:host {
+  display: grid;
+  height: 100vh; /* или другая высота */
+  place-items: center;
+}
+form {
+  width: 600px;
+  display: grid;
+  gap: 10px;
+}
+
+.universities-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.remove {
+  margin-top: 12px;
+  border: none;
+  background: none;
+}
+a {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.universities-add {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 140px;
+  margin-bottom: 10px;
+}
+.universities-title {
+  width: 0;
+}
+.title {
+  font-size: 41px;
+  margin: 0;
+}
+.submit {
+  width: 139px;
+  height: 52;
+  background-color: #ffe783;
+  margin-top: 36px;
+  margin-left: 140px;
+  padding: 15px 30px 15px 30px;
+  border-radius: 2px;
+  border: none;
+}
+
+input {
+  padding: 10px;
+  box-sizing: border-box;
+}

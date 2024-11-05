@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+.border {
+  border-radius: 5px;
+  border: 1px solid silver;
+}
+
+.label {
+  width: 140px;
+}
+
+.input-width {
+  width: 500px;
+}
+
+.select-width {
+  width: 305px;
+}
+
+.number-input-width {
+  width: 70px;
+}
+
+.input-height {
+  height: 44px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  width: 30px;
+  height: 22px;
+  background-color: #dfdfdf;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}

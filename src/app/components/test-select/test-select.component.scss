@@ -1,0 +1,12 @@
+.select {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+select {
+  width: 305px;
+  height: 44px;
+  padding: 5px;
+  border: 1px solid silver;
+  border-radius: 2px;
+}

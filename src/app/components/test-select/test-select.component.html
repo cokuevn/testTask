@@ -1,0 +1,11 @@
+<div class="select">
+  <label class="label">{{ label }}</label>
+  <select class="border select-width input-height" [formControl]="control">
+    <option *ngFor="let choice of choices" [value]="choice">
+      {{ choice }}
+    </option>
+  </select>
+  <div *ngIf="control.invalid && control.touched">
+    <small *ngIf="control.errors?.['required']">This field is required</small>
+  </div>
+</div>

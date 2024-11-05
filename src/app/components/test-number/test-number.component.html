@@ -1,0 +1,17 @@
+<div class="number-input">
+  <label class="label">{{ label }}</label>
+  <input
+    type="number"
+    class="styled-input border input-height number-input-width"
+    [formControl]="control"
+  />
+  <div class="button-container">
+    <button (click)="increment()" class="button button-increment">
+      <img src="../../../assets/Rectangle 2.2.png" />
+    </button>
+    <span></span>
+    <button (click)="decrement()" class="button button-decrement">
+      <img src="../../../assets/Rectangle 2.1.png" />
+    </button>
+  </div>
+</div>

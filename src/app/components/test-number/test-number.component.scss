@@ -1,0 +1,47 @@
+.number-input {
+  display: flex;
+  align-items: center;
+}
+span {
+  height: 2px;
+  display: block;
+  background-color: #9d9d9d;
+  margin-left: 5px;
+}
+.button-decrement,
+.button-increment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  width: 30px;
+  height: 22px;
+  background-color: #dfdfdf;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.button-decrement:hover,
+.button-increment:hover {
+  opacity: 0.8;
+}
+
+.styled-input {
+  box-sizing: border-box;
+  width: 70px;
+  height: 44px;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.styled-input:focus {
+  border-color: #3b5998;
+  outline: none;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}

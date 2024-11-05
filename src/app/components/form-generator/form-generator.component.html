@@ -1,0 +1,60 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <p class="title">Анкета</p>
+
+  <ng-container *ngFor="let field of config">
+    <ng-container [ngSwitch]="field.type">
+      <app-test-input
+        *ngSwitchCase="'input'"
+        [label]="field.label"
+        [control]="getFormControl(field.model)"
+      ></app-test-input>
+
+      <app-test-number
+        *ngSwitchCase="'number'"
+        [label]="field.label"
+        [control]="getFormControl(field.model)"
+      ></app-test-number>
+
+      <app-test-select
+        *ngSwitchCase="'select'"
+        [label]="field.label"
+        [choices]="field.choices || []"
+        [control]="getFormControl(field.model)"
+      ></app-test-select>
+
+      <div *ngSwitchCase="'input1'" class="universities-container">
+        <label class="universities-title">{{ field.label }}</label>
+        <div class="universities-container" formArrayName="universities">
+          <div
+            class="universities-add"
+            *ngFor="let university of universities.controls; let i = index"
+          >
+            <input
+              [formControlName]="i"
+              class="input-height select-width border"
+              placeholder="Например, ВолГУ"
+            />
+            <button type="button" class="remove" (click)="removeUniversity(i)">
+              <img src="../../../assets/Ellipse.png" />
+            </button>
+          </div>
+          <a type="button" (click)="addUniversity()">+ Добавить еще</a>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'checkbox'" [formGroup]="form">
+        <div formArrayName="{{ field.model }}">
+          <app-test-checkbox
+            [label]="field.label"
+            [choices]="field.choices || []"
+            [control]="getFormArray(field.model)"
+          ></app-test-checkbox>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <button class="submit" type="submit" [disabled]="!isFormValid()">
+    Отправить
+  </button>
+</form>
